@@ -1,0 +1,17 @@
+baseURL: https://uwescience.github.io/intro-git-tutorial
+languageCode: en-us
+title: Classic Git Workflows
+theme: "tutelage"
+
+params:
+  lineNoMinThreshold: 4
+markup:
+  tableOfContents:
+    startLevel: 0
+    # endLevel: 5
+  highlight:
+    lineNos: true
+    anchorLineNos: true
+  goldmark:
+    renderer:
+      unsafe: true
