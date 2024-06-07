@@ -1,6 +1,6 @@
-baseURL: https://uwescience.github.io/intro-git-tutorial
+baseURL: https://uwescience.github.io/graphical-intro-to-git
 languageCode: en-us
-title: Classic Git Workflows
+title: A Graphical Intro to Git
 theme: "tutelage"
 
 params:
