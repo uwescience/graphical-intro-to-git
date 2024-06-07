@@ -5,13 +5,14 @@ title: "Solo Git Workflow"
 
 # Introduction
 
-TODO
+In this tutorial, we'll learn how to use Git to keep track of changes to text files over time. The steps presented here represent just _one_ way to use Git -- a **solo** workflow, in which the files live on your personal computer and are never intended to be shared with or edited by other people.
 
 # Setting up a lil journal
 
-Make a new folder on desktop called 'my-journal'
-Open it and make a new text file in it called 'readme.txt'
-Open that in notepad/textedit
+Make a new folder on desktop called `my-journal`, and inside it make a new text file called `readme.txt`. You're going to want to use a **plain-text editor** for this task, which differs based on your operating system:
+
+- Windows/WSL: Use *Notepad*, which you can open from the Start menu
+- MacOS: Use TextEdit in plain text mode, which you can open by hitting `Command + Space` and typing `TextEdit` (one word). Once you've opened TextEdit, hit `Command + Shift + T` to switch to plain text mode.
 
 Type out some info about yourself, like this:
 
@@ -21,40 +22,28 @@ Favorite Food: Pizza
 Favorite Animal: Bunnies
 ```
 
-Save file.
+Save that file as `readme.txt` in your `my-journal` folder.
 
-But old versions will get lost!
+At this point our `my-journal` folder is just a normal file folder, with normal files. Let's turn it into a git repository so we can track changes to those files over time!
 
 # Turning our journal folder into a repository
 
-Now, let's open Sublime Merge:
-
-{{% aside %}}
-🔗 [url](url)
-{{% /aside %}}
-
-yep
+Open the Sublime Merge application, which is a graphical utility to work with Git repositories. It'll look like this:
 
 ![](./img/first-open.png)
 
-New Repository
-
-Go to desktop, the `my-journal` folder. Click `Select Folder`
-
-now our folder is a repository, and window looks like this:
+Click the "New Repository" button, and in the dialog window that opens up navigate to your `my-journal` folder. Select it. Sublime Merge will turn the folder into a git repo, and present a screen to us that looks like this:
 
 ![](./img/new-repo-view.png)
 
-window layout:
-- timeline in center, showing ordered history of all commits. 
-- file detail in right - given selected commit, can see what changed (the diff)
-- ignore left side for now
-
+The window is laid out like this:
+- The central region is a timeline, showing the ordered history of all file changes as grouped into named snapshots called **commits** (we're "_committing_" to a given version of the file at that point in time). 
+- The right region contains a summary tab and file tabs. If we select a point in the timeline, this tab will show us the differences between files at that point and the commit immediately beforehand in time. These differences are called *the diff*.
+- The left region contains several different lists, most of which we'll ignore for now. Throughout these tutorials, we'll learn what branches and remotes mean. If you click the `Files` tab, you'll see all the files in the repository.
 
 # Making our first commit
 
-
-let's make our first commit, in which we'll mark the initial version of our user profile.
+Let's make our first commit, in which we'll mark the initial version of our user profile.
 
 We'll start by **staging** the changes, which indicates to Git that we want to _include_ them in the next commit. Expand the list of "Untracked Files" (1), and then readme.txt (2). Note how this displays the contents of the file in green: these are the _changes_ in the file since the last commit, also called the *diff*. Since it's a new file, and this is our first commit, all of the file text is new and thus highlighted in green. To include this data in our commit, click the 'Stage' button (3):
 
@@ -132,9 +121,13 @@ To view the difference between two commits that aren't next to each other in tim
 
 Sublime Merge will let us browse the diffs at various points in time, but what if we want to open previous versions of our files in other applications, like Photoshop or VSCode?
 
-We can use Git to "time-travel" all of the files back to a previous point in time by *checking out* a previous commit. In general Git jargon, the term *check out* means to make the contents of a file or set of files reflect their contents at the time a given commit was made:
+We can use Git to "time-travel" all of the files back to a previous point in time by *checking out* a previous commit. In general Git jargon, the term *check out* means to make the contents of a repository match a specific point on the timeline:
+
+{{% aside %}}
+📖 **"Check out"** - _verb_
 - To "check out a commit" means to make all files in the repo reflect their contents at that commit's point in the timeline.
 - To "check out a file" usually means to return a file to its present-day contents
+{{% /aside %}}
 
 Anyway, let's check out a previous commit.
 

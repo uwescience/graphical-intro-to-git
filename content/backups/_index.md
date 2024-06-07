@@ -5,8 +5,7 @@ title: "Backing up repositories"
 
 # Introduction
 
-Your repository doesn't have to _just_ live on your computer -- it's possible to back it up to the cloud (or another computer, or multiple locations on your current computer) and keep the timelines consistent across all of them. 
-
+In this tutorial, we'll learn how to back up the repo we made in the [solo workflow tutorial](../solo) to the cloud. This backup will _include_ the file change histories. Because that backup lives in the cloud, you can technically download it to multiple computers (or multiple locations on your current computer). We'll also learn how to keep the timelines consistent across all of those copies, in case we add content to one of them. 
 
 # Making a GitHub account
 
@@ -203,8 +202,6 @@ To get those changes on our local repo, we have to **pull** them (the opposite o
 We'll see our new commits appear in the timeline:
 
 ![](./img/new-commit-local.png)
-
-TODO note main vs origin/main
 
 # What if we change something on both GitHub _and_ locally?
 
