@@ -124,7 +124,7 @@ Now we have a journal folder containing our personal profile and our favorite re
 
 ![](./img/random_commit.png)
 
-To view the difference between two commits that aren't next to each other in time, hold the control key and select the two commits you want to compare (TODO: command on mac?). Notice the `Diffing from` line in the summary, indicating the point in the timeline we're "comparing" against. Put another way: by selecting multiple commits, the diff view will show us all of the changes that happened between those points in the timeline:
+To view the difference between two commits that aren't next to each other in time, hold the control key (or on MacOS, the command key) and select the two commits you want to compare. Notice the `Diffing from` line in the summary, indicating the point in the timeline we're "comparing" against. Put another way: by selecting multiple commits, the diff view will show us all of the changes that happened between those points in the timeline:
 
 ![](./img/custom-diff.png)
 
