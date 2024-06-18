@@ -52,6 +52,11 @@ ssh-keygen
 
 Hit the enter key to accept the default values for the questions the tool asks you. **Do not specify a passphrase!!** Just leave it blank :) .
 
+Then, run this command:
+```bash
+chmod 600 ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
+```
+
 This process will generate an **SSH key**, which is like a super-powered password that comes in two parts: a _private_ key and a _public_ key. You'll share the public key with GitHub. Run this command, which prints the contents of your public key to the terminal:
 
 ```bash
